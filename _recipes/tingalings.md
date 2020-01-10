@@ -1,6 +1,6 @@
 ---
 title: Ting-a-lings
-tag: xmas
+tags: xmas
 ---
 #Tingalings (Xmas)
 lorem ipsum

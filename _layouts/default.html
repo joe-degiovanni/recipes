@@ -11,7 +11,7 @@
 {% for recipe in site.recipes %}
 <li>
     <a href="{{ recipe.url }}">
-        {{ recipe.name }}
+        {{ recipe.title }}
     </a>
 </li>
 <p>{{ recipe.content | markdownify }}</p>

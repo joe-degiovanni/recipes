@@ -10,7 +10,7 @@
 <ul>
     <li><a href="/">Home</a></li>
     {% for tag in site.tags %}
-    <li><a href="/tags/{{tag[0]}}">{{tag[0]}}</a></li>
+    <li><a href="/index.html?tag={{tag[0]}}">{{tag[0]}}</a></li>
     {% endfor %}
 </ul>
 
@@ -26,5 +26,15 @@ posts
 </ul>
 
 <span>Site last updated at {{site.time}}</span><br>
+
+<span id="tag">no tag selected</span>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const tag = urlParams.get('tag');
+    if (tag != null) {
+        document.getElementById("tag").innerHTML = 'tag: ' + tag;
+    }
+</script>
 </body>
 </html>
